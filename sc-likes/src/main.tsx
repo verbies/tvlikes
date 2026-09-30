@@ -1,0 +1,1 @@
+import {createRoot} from 'react-dom/client';import App from './App';import './styles.css';if(/SCLikesTV/.test(navigator.userAgent))document.documentElement.classList.add('tv');createRoot(document.getElementById('root')!).render(<App/>);

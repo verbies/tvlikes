@@ -1,0 +1,59 @@
+:root{--bg:#101012;--panel:#18181b;--hover:#212126;--text:#f4f4f5;--muted:#a1a1aa;--accent:#ff5500;--on-accent:#fff;--active:#2a1a12;--border:#2a2a30;--radius:14px;--art:48px}
+[data-theme=midnight]{--bg:#0a0f1f;--panel:#111a33;--hover:#182449;--muted:#94a3c4;--accent:#ea6191;--on-accent:#111;--active:#2a1b3a;--border:#24325e}
+[data-theme=dracula]{--bg:#282a36;--panel:#21222c;--hover:#343746;--text:#f8f8f2;--muted:#a3accf;--accent:#bd93f9;--on-accent:#282a36;--active:#3a3552;--border:#44475a}
+[data-theme=light]{--bg:#f6f6f8;--panel:#fff;--hover:#eeeef2;--text:#18181b;--muted:#63636b;--active:#fff0e8;--border:#e2e2e8}
+[data-theme=contrast]{--bg:#000;--panel:#000;--hover:#1e1e1e;--text:#fff;--muted:#eee;--accent:#ffc400;--on-accent:#000;--active:#2b2100;--border:#fff}
+[data-density=compact]{--art:38px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.4 system-ui,sans-serif}
+a{color:var(--accent)}small{color:var(--muted)}h1,h2,h3{margin:0}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:var(--panel);border:1px solid var(--border);border-radius:calc(var(--radius) * .7);padding:7px 12px;transition:background .15s,transform .15s}
+button:hover{background:var(--hover)}:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+input[type=range]{accent-color:var(--accent)}
+.btn{background:var(--accent);color:var(--on-accent);border:0;border-radius:999px;padding:14px 30px;font-size:17px;font-weight:700;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent)}
+.btn:hover{background:var(--accent);transform:translateY(-1px) scale(1.03)}.btn.sm{padding:8px 18px;font-size:14px;box-shadow:none}.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.wrap{max-width:900px;margin:auto;padding:0 20px 260px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}.brand{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--accent)}.chip{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);margin-right:8px}
+.hero0{text-align:center;padding:28px 12px;border-radius:calc(var(--radius) * 1.6);border:1px solid var(--border);background:radial-gradient(120% 140% at 50% 0,color-mix(in srgb,var(--accent) 22%,var(--panel)),var(--panel))}
+.hero0 h1{font-size:clamp(26px,5vw,38px);margin-bottom:6px}.hero0 p{margin:0 0 18px;color:var(--muted)}
+.hero{display:flex;gap:20px;align-items:center;margin:20px 0;padding:16px;background:var(--panel);border:1px solid var(--border);border-radius:calc(var(--radius) * 1.3)}
+.hero img,.ph.big{width:min(34vw,180px);height:min(34vw,180px);border-radius:var(--radius);object-fit:cover;box-shadow:0 10px 30px #0006}.hero h2{margin:4px 0;font-size:22px}.hero p{margin:0}
+.list{margin-top:20px;background:var(--panel);border:1px solid var(--border);border-radius:calc(var(--radius) * 1.3);padding:12px}
+.search{width:100%;padding:11px 14px;border-radius:999px;border:1px solid var(--border);background:var(--bg);margin-bottom:10px}
+.row{display:flex;gap:12px;align-items:center;padding:0 8px;height:calc(100% - 4px);border-radius:var(--radius);transition:background .15s;border-left:4px solid transparent}
+.row:hover{background:var(--hover)}.row.on{background:var(--active);border-left-color:var(--accent)}
+.row .play{flex:1;display:flex;gap:12px;align-items:center;background:none;border:0;text-align:left;min-width:0;padding:4px}
+.row img,.ph{width:var(--art);height:var(--art);border-radius:calc(var(--radius) * .5);background:var(--border);flex:none;object-fit:cover}
+.tt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.heart{color:var(--accent)}.row a{font-size:13px;white-space:nowrap}
+.eq{display:inline-flex;gap:2px;align-items:flex-end;height:14px;margin-right:6px}.eq i{width:3px;background:var(--accent);animation:eq .9s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}@keyframes eq{0%,100%{height:3px}50%{height:14px}}
+.skel .bar{flex:1;height:14px;border-radius:6px;background:var(--hover);animation:pulse 1.2s ease-in-out infinite}@keyframes pulse{50%{opacity:.4}}
+.player{position:fixed;left:12px;right:12px;bottom:12px;background:color-mix(in srgb,var(--panel) 92%,transparent);backdrop-filter:blur(14px);border:1px solid var(--border);border-radius:calc(var(--radius) * 1.5);padding:10px 16px;box-shadow:0 10px 40px #0007;max-width:980px;margin:auto}
+.pl-in{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:16px;align-items:center}
+.now{display:flex;gap:12px;align-items:center;min-width:0}.now img,.now .ph{width:52px;height:52px}.meta{display:flex;flex-direction:column;min-width:0}.meta strong,.meta small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btns{display:flex;gap:10px;justify-content:center;align-items:center}.big{background:var(--accent);color:var(--on-accent);border:0;border-radius:50%;width:44px;height:44px;padding:0;font-size:18px}.big:hover{background:var(--accent)}
+.seek{display:flex;gap:8px;align-items:center}.seek input{flex:1}.vol{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.vol input{width:80px}.msg{color:var(--accent);margin:6px 0 0;text-align:center}
+@media(max-width:700px){.pl-in{grid-template-columns:1fr;gap:8px}.vol input{width:70px}.hero{flex-direction:column;text-align:center}.row a{display:none}}
+.scrim{position:fixed;inset:0;background:#0009;z-index:10;display:flex;justify-content:flex-end}
+.drawer{width:min(420px,100%);height:100%;overflow:auto;background:var(--bg);border-left:1px solid var(--border);padding:20px;animation:slide .2s ease-out}@keyframes slide{from{transform:translateX(30px);opacity:0}}
+.dhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.drawer section{margin-bottom:26px}.drawer h3{margin-bottom:10px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}.seg .sel{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.lbl{display:block;margin:14px 0 6px;color:var(--muted);font-size:13px}.field{display:block;width:100%;margin-top:4px;padding:10px;border-radius:calc(var(--radius) * .6);border:1px solid var(--border);background:var(--panel)}
+.sw{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.swatch{width:28px;height:28px;border-radius:50%;padding:0;border:2px solid var(--border)}.swatch[aria-pressed=true]{outline:3px solid var(--text)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---- Android TV / Google TV (class set in main.tsx when running inside the TV app) ---- */
+.tv body{font-size:18px}
+.tv .wrap{max-width:1200px;padding-left:56px;padding-right:56px;padding-top:24px}
+.tv .player{left:56px;right:56px;bottom:32px;max-width:1200px}
+.tv :root,.tv{--art:52px}
+.tv button{padding:10px 18px;transition:none}
+.tv .btn{padding:16px 36px;font-size:20px}
+.tv .big{width:52px;height:52px}
+.tv :focus{outline:4px solid var(--accent);outline-offset:3px}
+.tv .row .play:focus{background:var(--hover);outline-offset:-2px}
+.tv .search{font-size:18px}
+.tv .row a,.tv .player a,.tv .player [aria-expanded]{display:none} /* external links and the embed toggle are useless on a TV */
+.tv input[type=range]{min-width:160px;height:28px}
+.tv ::-webkit-scrollbar{display:none}
